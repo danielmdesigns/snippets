@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javscript & jQuery Snippet</title>
+<!-- jQuery Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<!-- onClick Alert Javascript -->
+<script>
+function messageWindow() {
+	alert("Here is the .onClick alert window");
+}
+</script>
+<!-- END onClick Alert Javascript -->
+
+<!-- slideToggle Function (jQuery) -->
+<script>
+$(document).ready(function(e) {
+    $("#slideToggleId").click(function(){
+		$("#slideToggleContent").slideToggle("slow")
+		});
+});
+</script>
+<!-- END slideToggle Function (jQuery) -->
+</head>
+
+<!-- onClick Alert HTML -->
+<a href="#" onClick="messageWindow()">Click here for an alert</a>
+<!-- END onClick Alert HTML -->
+
+<br><br>
+
+<!-- slideToggle Function HTML -->
+<a href="#" id="slideToggleId">Click here for slideToggle</a>
+<div id="slideToggleContent" style="display:none;">
+<p>Ridiculus Ligula Porta Dapibus Elit</p>
+</div>
+<!-- END slideToggle Function HTML -->
+<body>
+</body>
+</html>
