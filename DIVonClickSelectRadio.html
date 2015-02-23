@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DIV onClick Select Radio</title>
+<style>
+.big input[name=button] {
+    /*display:none; */
+}
+  
+.selection label {
+    display:inline-block;
+    background-color:#E5E5E5;
+    width:100px;
+    height:100px;
+}
+
+.selection input[type="radio"]:checked + label {
+    background-color:#CACACA;
+} 
+</style>
+</head>
+<body>
+  
+<div class="selection">
+  <input id="one" name="button" type="radio" />
+  <label for="one">One</label>   
+</div>
+
+<div class="selection">
+  <input id="two" name="button" type="radio" />
+  <label for="two">or Two</label>   
+</div>
+
+</body>
+</html>
