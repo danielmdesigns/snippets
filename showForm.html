@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Promo Code Snippet</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
+#showButton {
+	color:#0085b2;
+	font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style:italic;
+	font-size:14px;
+}
+.fa {
+	color:#AFAFAF;
+}
+.label-control {
+	color:#0085b2;
+	font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+}
+input {
+	margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+<i class="fa fa-usd"></i> <a href="#" type='button' value='click me' id='showButton'/> Have a promo code?</a>
+
+<form action="#" method="post">
+<input type="hidden" name="promocode" id="promocode" value="#">
+
+  <div class="control-group">
+    <div class="controls">
+      <label class="label-control" for="promo">Promotion Code: </label>
+      <input type="" name="promo" id="promo">
+    </div>
+  </div>
+</form>
+                    
+
+<script type="application/javascript">
+$('form').hide();
+$("#showButton").click(function(e){
+  $('form ').show('fast');    
+});
+</script>
+</body>
+</html>
