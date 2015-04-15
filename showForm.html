@@ -7,8 +7,20 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
-#showButton {
-	color:#0085b2;
+.left{float:left}
+.right{float:right}
+.clear{clear:both}
+.formContainer {
+	/*background:gray;*/
+	width:250px;
+	height:150px;
+	
+}
+.space {
+	margin-bottom:10px;
+}
+#show {
+	color:#333333;
 	font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style:italic;
 	font-size:14px;
@@ -17,35 +29,48 @@
 	color:#AFAFAF;
 }
 .label-control {
-	color:#0085b2;
+	color:#333333;
 	font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:14px;
 	font-weight:bold;
 }
 input {
 	margin-top:10px;
+	border-radius:4px;
+	height:25px;
+	width:100px;
 }
 </style>
 </head>
 
 <body>
-<i class="fa fa-usd"></i> <a href="#" type='button' value='click me' id='showButton'/> Have a promo code?</a>
+<div class="formContainer">
+<div class="space right">
+  <i class="fa fa-usd"></i> <a href="#" type='button' value='click me' id='show'/> Have a promo code?</a>  
+</div>
 
+<hr class="clear"></hr>
+
+<div class="right">
 <form action="#" method="post">
 <input type="hidden" name="promocode" id="promocode" value="#">
 
   <div class="control-group">
     <div class="controls">
-      <label class="label-control" for="promo">Promotion Code: </label>
+      <label class="label-control" for="promo">Promotion code &nbsp;&nbsp;&nbsp;&nbsp;</label>
       <input type="" name="promo" id="promo">
+      
     </div>
   </div>
 </form>
+</div>
+
+</div>
                     
 
 <script type="application/javascript">
 $('form').hide();
-$("#showButton").click(function(e){
+$("#show").click(function(){
   $('form ').show('fast');    
 });
 </script>
