@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+.shape {
+    max-width:100%;
+    margin:0 auto;
+}
+.top {
+    height:0;
+    border-width:0 0 700px 2500px;
+    border-style:solid;
+    border-color:transparent #d71f55 #d71f55 transparent;
+}
+.bottom {
+    height: 50px;
+	width:100%;
+    background-color:#d71f55;
+}
+
+.backgroundFill {
+    background-color:#d71f55;
+    height:1600px;
+    width:100%;
+}
+
+/* Support transparent border colors in IE6. */
+* html .top {
+    filter:chroma(color=#123456);
+    border-top-color:#123456;
+    border-left-color:#123456;
+}
+</style>
+<body>
+
+<div class="shape">
+    <div class="top"></div>
+    <div class="bottom"></div>
+</div>
+
+<div class="backgroundFill"></div>
+
+
+
+</body>
+</html>
