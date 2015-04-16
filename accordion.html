@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>Accordion | Open/Close Snippet</title>
+<style type="text/css">
+body{
+  width:500px;
+}
+.collapse{
+  font-size: 20px;
+  display:block;
+}
+.collapse + input{
+  display:none;
+}
+/*.collapse::after{
+  content:"»";float:right;
+}*/
+.collapse + input + *{
+  display:none;
+}
+.collapse+ input:checked + *{
+  display:block;
+}
+</style>
+</head>
+<body>
+  
+  
+<label class="collapse" for="_1">+ &nbsp; Title</label>
+<input id="_1" type="checkbox">
+<div>
+Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</div>
+
+<br>
+
+<label class="collapse" for="_2">+ &nbsp; Title</label>
+<input id="_2" type="checkbox">
+<div>
+Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+/*add code here*/
+</script>
