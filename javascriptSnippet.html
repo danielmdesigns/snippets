@@ -3,6 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Javscript & jQuery Snippet</title>
+
+<!-- jQuery Hover on Div -->
+<script>
+$(document).ready(function(){
+  $('div').hover(function(){
+        $(this).addClass('active');
+    }, function(){
+        $(this).removeClass('active');
+    });
+});
+</script>
+
+
 <!-- jQuery Library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
