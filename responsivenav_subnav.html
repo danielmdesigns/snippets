@@ -12,35 +12,29 @@
 .nav-wrapper {
   position:relative;
 }
-
 .nav-wrapper .nav-inner {
   background: #afafaf;
   position: relative;
   z-index: 100;
 }
-
 .nav-wrapper ul {
   list-style: none;
   padding: 0;
   margin: 0 auto;
 }
-
 .nav-wrapper .nav {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   list-style: none;
 }
-
 .nav > li {
   display: inline-block;
   padding:0 1em 0 1em;
 }
-
 .nav > li:first-child {
   margin-left: 0;
 }
-
 .nav > li > a {
   color: #fff;
   font-size: 1em;
@@ -51,7 +45,6 @@
   outline: none;
   text-decoration:none;
 }
-
 .nav li .nav-submenu {
   position: absolute;
   left: 0;
@@ -60,11 +53,10 @@
   background:#f2f2f2;
   display:none;
 }
-
 .nav > li.nav-open {
   background:#f2f2f2;
+  border-bottom:2px solid #f2f2f2;
 }
-
 .nav > li.nav-open a {
   color:#222;
 }
@@ -73,18 +65,15 @@
   z-index: 1000;
   display:block;
 }
-
 .nav li .nav-submenu li {
   width: 24.5%;
   height:100%;
   vertical-align: top;
   display:inline-block;
 }
-
 .nav li .nav-submenu li:first-child {
  border-left:0px;
 }
-
 .nav li .nav-submenu li a {
   display: block;
   text-align: center;
@@ -94,9 +83,19 @@
   cursor:pointer;
   /*border-left:1px solid #afafaf;*/
 }
-
 .nav li .nav-submenu li a:hover {
   background-color:#e5e5e5;
+}
+.toggled {
+  display: none;
+}
+.menu-toggle {
+	float:right;
+	margin:6px 10px 0 0;
+	font-size:30px;
+}
+.carot {
+	font-size:10px;
 }
 
 @media screen and (max-width:480px) {
@@ -111,7 +110,6 @@
   border-left:none;
   display:block;
 }
-
 .nav li .nav-submenu {
   left: 0;
   top: 4em;
@@ -120,10 +118,20 @@
   display: none;
   position: static;
 }
-
 .nav > li.nav-open {
   background: #afafaf;
   padding:0;
+  border-bottom:none;
+}
+}
+
+@media screen and (min-width : 480px) {
+.toggled {
+  display: block !important;
+  text-align:right;
+}
+.menu-toggle {
+  display: none;
 }
 }
 
@@ -134,9 +142,12 @@
 
 <div class="nav-wrapper">
   <div class="nav-inner">
-    <ul class="nav">
+    <ul id="menu-content" class="nav menu-content toggled">
       <li>
-        <a href="#">Artist &#x21af;</a>
+        <a href="#">Shop</a>
+      </li>
+      <li>
+        <a href="#">Artist <span class="carot"> &#x25BE </span></a>
         <ul class="nav-submenu">
           <li><a href="#">Richie Lucero</a></li>
           <li><a href="#">Shay Haas</a></li>
@@ -149,33 +160,30 @@
         </ul>
       </li>
       <li>
-        <a href="#">Shop</a>
-      </li>
-      <li>
         <a href="#">FAQs</a>
       </li>
        <li>
         <a href="#">Contact</a>
       </li>
     </ul>
+    <a id="menu-toggle" class="menu-toggle">&#x22EF;</a>
   </div>
 </diV>
 
 <script type="text/javascript">
+$( "#menu-toggle" ).click(function(){
+  $( "#menu-content" ).slideToggle(400);
+});
+
 $(document).ready(function(){
   $('ul.nav li').click(function(){
-    if($(this).hasClass('nav-open'))
-  {
-    
-  $(this).removeClass('nav-open');
-  }
-  else
-  {
-  $('ul.nav li').removeClass('nav-open');
-    $(this).addClass('nav-open');
-  }
-  });
- 
+    if($(this).hasClass('nav-open')){
+  		$(this).removeClass('nav-open');
+  	} else {
+  		$('ul.nav li').removeClass('nav-open');
+    	$(this).addClass('nav-open');
+  	}
+});
 });
 </script>
 
